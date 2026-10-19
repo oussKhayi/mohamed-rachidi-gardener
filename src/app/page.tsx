@@ -89,9 +89,7 @@ function Hero() {
               className="object-cover"
             />
           </div>
-          <figcaption className="mt-2 text-xs leading-snug text-stone sm:text-sm">
-            Villa à Bouskoura, entretien mensuel
-          </figcaption>
+          <figcaption className="mt-2 text-xs leading-snug text-stone sm:text-sm">{heroImages.sideCaption}</figcaption>
         </figure>
         <div className="col-span-5 rounded-xl bg-sage p-4 sm:col-span-2 sm:flex sm:flex-col sm:justify-end sm:p-5">
           <p className="text-sm text-stone">Ils me font confiance</p>
@@ -340,7 +338,7 @@ function FinalCta() {
           <WhatsAppButton>Écrire sur WhatsApp</WhatsAppButton>
           <a
             href={`tel:+${site.whatsapp}`}
-            className="inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full border border-olive/25 px-6 text-[15px] font-semibold text-olive transition-colors hover:border-olive"
+            className="inline-flex min-h-12 items-center justify-center gap-2.5 whitespace-nowrap rounded-full border border-olive/25 px-6 text-[15px] font-semibold text-olive transition-colors hover:border-olive"
           >
             <Phone className="size-5" aria-hidden="true" />
             {site.phoneDisplay}
@@ -360,7 +358,22 @@ function Footer() {
           <p className="mt-1">Auto-entrepreneur, services de jardinage</p>
           <p className="mt-1">{site.ice}</p>
         </div>
-        <p>{site.city}, Maroc. © 2026</p>
+        <div className="sm:text-right">
+          <p>
+            {site.city}, {site.region}. © 2026
+          </p>
+          <p className="mt-1">
+            Site réalisé par{" "}
+            <a
+              href="https://oussama-khayi.com"
+              target="_blank"
+              rel="noopener"
+              className="font-medium text-white underline decoration-white/40 underline-offset-4 hover:decoration-white"
+            >
+              Oussama Khayi
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );

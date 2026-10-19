@@ -27,7 +27,7 @@ export function WhatsAppButton({ message = defaultMessage, children, variant = "
       href={whatsappLink(message)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-flex min-h-12 items-center justify-center gap-2.5 rounded-full px-6 text-[15px] font-semibold transition-colors ${styles[variant]} ${className}`}
+      className={`inline-flex min-h-12 items-center justify-center gap-2.5 whitespace-nowrap rounded-full px-6 text-[15px] font-semibold transition-colors ${styles[variant]} ${className}`}
     >
       <WhatsAppIcon />
       {children}

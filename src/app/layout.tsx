@@ -3,11 +3,11 @@ import "./globals.css";
 import { site } from "@/content/site";
 
 const description =
-  "Mohammed Rachidi, jardinier auto-entrepreneur au Maroc. Entretien et création de jardins pour villas, résidences, hôtels, écoles et administrations. Devis gratuit, facture pour chaque intervention.";
+  "Mohammed Rachidi, jardinier auto-entrepreneur à Laâyoune. Entretien et création de jardins pour villas, résidences, hôtels, écoles et administrations. Devis gratuit, facture pour chaque intervention.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.SITE_URL ?? "http://localhost:3000"),
-  title: `${site.name}, jardinier auto-entrepreneur au Maroc`,
+  title: `${site.name}, jardinier auto-entrepreneur à Laâyoune`,
   description,
   openGraph: {
     title: `${site.name}, services de jardinage`,
