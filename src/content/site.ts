@@ -76,6 +76,19 @@ export const missions: Mission[] = [
     ],
   },
   {
+    slug: "residence-souissi",
+    title: "Jardin commun autour d'une piscine",
+    client: "Résidence fermée",
+    clientType: "Résidence",
+    location: "Rabat, Souissi",
+    year: 2024,
+    work: ["Entretien des massifs", "Taille des arbres", "Arrosage"],
+    duration: "Contrat d'entretien, 2 passages par semaine en été",
+    summary:
+      "Entretien des massifs et des arbres autour de la piscine commune. Planning renforcé l'été, quand la piscine est la plus fréquentée.",
+    images: [{ src: u("1636484807469-e33af13716b7"), alt: "Piscine de résidence entourée d'arbres et de plantes" }],
+  },
+  {
     slug: "hotel-marrakech",
     title: "Jardin d'accueil d'un hôtel",
     client: "Hôtel",

@@ -27,7 +27,9 @@ export function Header() {
             </a>
           ))}
         </nav>
-        <WhatsAppButton className="hidden !min-h-10 !px-4 text-sm sm:inline-flex">Devis gratuit</WhatsAppButton>
+        <div className="hidden sm:block">
+          <WhatsAppButton className="!min-h-10 whitespace-nowrap !px-4 text-sm">Devis gratuit</WhatsAppButton>
+        </div>
       </div>
     </header>
   );

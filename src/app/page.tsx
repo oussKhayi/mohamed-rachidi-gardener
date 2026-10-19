@@ -68,7 +68,7 @@ function Hero() {
       </div>
 
       <div className="grid grid-cols-5 gap-3 sm:gap-4 lg:col-span-6">
-        <div className="relative col-span-3 row-span-2 aspect-[3/4] overflow-hidden rounded-xl bg-sage">
+        <div className="relative col-span-3 min-h-[17rem] overflow-hidden rounded-xl bg-sage sm:row-span-2 sm:min-h-[30rem]">
           <Image
             src={heroImages.main.src}
             alt={heroImages.main.alt}
@@ -78,8 +78,8 @@ function Hero() {
             className="object-cover"
           />
         </div>
-        <figure className="col-span-2">
-          <div className="relative aspect-square overflow-hidden rounded-xl bg-sage">
+        <figure className="col-span-2 flex flex-col">
+          <div className="relative min-h-[8rem] flex-1 overflow-hidden rounded-xl bg-sage sm:aspect-square sm:flex-none">
             <Image
               src={heroImages.side.src}
               alt={heroImages.side.alt}
@@ -93,9 +93,9 @@ function Hero() {
             Villa à Bouskoura, entretien mensuel
           </figcaption>
         </figure>
-        <div className="col-span-2 flex flex-col justify-end rounded-xl bg-sage p-4 sm:p-5">
-          <p className="text-xs text-stone sm:text-sm">Ils me font confiance</p>
-          <ul className="wide mt-2 space-y-0.5 text-sm font-semibold leading-snug text-olive sm:text-base">
+        <div className="col-span-5 rounded-xl bg-sage p-4 sm:col-span-2 sm:flex sm:flex-col sm:justify-end sm:p-5">
+          <p className="text-sm text-stone">Ils me font confiance</p>
+          <ul className="wide mt-1.5 flex flex-wrap gap-x-4 gap-y-0.5 text-[15px] font-semibold leading-snug text-olive sm:mt-2 sm:block sm:space-y-0.5 sm:text-base">
             <li>Particuliers</li>
             <li>Résidences</li>
             <li>Hôtels</li>
@@ -182,7 +182,7 @@ function Invoice() {
     { label: "Évacuation des déchets verts", qty: "Forfait" },
   ];
   return (
-    <figure className="mx-auto w-full max-w-md lg:rotate-[1.5deg]">
+    <figure className="mx-auto w-full max-w-md lg:rotate-1">
       <div className="rounded-lg bg-white p-6 text-ink sm:p-8">
         <div className="flex items-start justify-between gap-4 border-b border-sage-line pb-5">
           <div className="flex items-center gap-3">
@@ -217,7 +217,7 @@ function Invoice() {
         </ul>
         <p className="pt-4 text-xs text-stone">{site.ice}</p>
       </div>
-      <figcaption className="mt-3 text-center text-sm text-white/60 lg:-rotate-[1.5deg]">
+      <figcaption className="mt-3 text-center text-sm text-white/60 lg:-rotate-1">
         Exemple de facture mensuelle pour une résidence
       </figcaption>
     </figure>
@@ -236,7 +236,7 @@ function About() {
       id="a-propos"
       className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-12 lg:gap-16"
     >
-      <div className="relative aspect-[4/5] overflow-hidden rounded-xl bg-sage lg:col-span-5">
+      <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-sage sm:aspect-[4/5] lg:col-span-5">
         <Image
           src={portrait.src}
           alt={portrait.alt}
@@ -325,8 +325,8 @@ function Faq() {
 
 function FinalCta() {
   return (
-    <section className="px-4 pb-20 sm:px-6 sm:pb-28">
-      <div className="mx-auto flex max-w-6xl flex-col items-start gap-8 rounded-2xl border border-sage-line px-6 py-12 sm:px-12 sm:py-16 lg:flex-row lg:items-center lg:justify-between">
+    <section className="mx-auto max-w-6xl px-4 pb-20 sm:px-6 sm:pb-28">
+      <div className="flex flex-col items-start gap-8 rounded-2xl border border-sage-line px-6 py-12 sm:px-12 sm:py-16 lg:flex-row lg:items-center lg:justify-between">
         <div className="flex items-start gap-5">
           <Image src="/brand/mark.png" alt="" width={231} height={175} className="hidden h-14 w-auto sm:block" />
           <div>
